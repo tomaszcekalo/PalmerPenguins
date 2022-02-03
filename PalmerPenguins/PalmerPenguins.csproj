@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup Label="PalmerPenguins">
+    <None Include="PalmerPenguins.consumption.cs">
+      <DependentUpon>PalmerPenguins.mbconfig</DependentUpon>
+    </None>
+    <None Include="PalmerPenguins.training.cs">
+      <DependentUpon>PalmerPenguins.mbconfig</DependentUpon>
+    </None>
+    <None Include="PalmerPenguins.zip">
+      <DependentUpon>PalmerPenguins.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
